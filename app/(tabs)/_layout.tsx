@@ -27,8 +27,12 @@ export default function TabLayout() {
       }}>
       <Stack.Screen
         name="index"
+        
         options={{
-          title: 'Lumedo',
+          title: 'Lumedo - AutoShop',
+          headerStyle : {
+            backgroundColor: '#FFFF00',
+          },
           headerRight: () => (
             <Link href="/modal" asChild>
               <Pressable>

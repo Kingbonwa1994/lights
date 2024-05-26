@@ -1,11 +1,16 @@
-import { Image, StyleSheet } from 'react-native';
+import {  StyleSheet, ActivityIndicator } from 'react-native';
 import { Text, View } from '@/components/Themed';
+import { Image } from '@rneui/themed';
 
-export default function TabOneScreen() {
+const BASE_URI = '../assets/images/bulb.png'
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Image width={40} height={40} src='/assets/images/bulb.jpg' />
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+       <Image
+            source={{ uri: BASE_URI }}
+            containerStyle={styles.image}
+            PlaceholderContent={<ActivityIndicator />}
+          />
     </View>
   );
 }
@@ -16,17 +21,16 @@ const styles = StyleSheet.create({
     textShadowColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#000000',
+    backgroundColor: '#222',
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
+    
   },
-  separator: {
-    marginVertical: 30,
-    marginLeft: 100,
-    height: 60,
-    borderRadius: 20,
-    width: '80%',
+  image: {
+    flex: 1,
+    width: '40%',
+    backgroundColor: '#fff',
   },
 });
