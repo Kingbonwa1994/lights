@@ -1,16 +1,14 @@
 import {  StyleSheet, ActivityIndicator } from 'react-native';
 import { Text, View } from '@/components/Themed';
-import { Image } from '@rneui/themed';
+import Products from '@/components/Products';
 
-const BASE_URI = '../assets/images/bulb.png'
 export default function HomeScreen() {
+  
   return (
     <View style={styles.container}>
-       <Image
-            source={{ uri: BASE_URI }}
-            containerStyle={styles.image}
-            PlaceholderContent={<ActivityIndicator />}
-          />
+      <Text style={styles.title}>Product Images</Text>
+      
+      <Products  />
     </View>
   );
 }
@@ -21,16 +19,11 @@ const styles = StyleSheet.create({
     textShadowColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#222',
+    backgroundColor: '#000',
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
-    
-  },
-  image: {
-    flex: 1,
-    width: '40%',
-    backgroundColor: '#fff',
+    color: '#ff0'
   },
 });
