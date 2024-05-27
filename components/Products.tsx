@@ -14,13 +14,6 @@ const Products = () => {
         numColumns={2}
         contentContainerStyle={styles.list}
       />
-      <FlatList
-        data={products}
-        renderItem={({ item }) => <ProductCard product={item} />}
-        keyExtractor={(item) => item.id.toString()}
-        numColumns={2}
-        contentContainerStyle={styles.list}
-      />
     </View>
   );
 };
@@ -28,11 +21,12 @@ const Products = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f8f8',
     paddingTop: 20,
+    width: '100%',
   },
   list: {
-    paddingHorizontal: 10,
+    paddingHorizontal: 0,
+    width: "100%",
   },
 });
 

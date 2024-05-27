@@ -76,7 +76,7 @@ export default function TabLayout() {
               name="shopping-cart"
               size={25}
               color={Colors[colorScheme ?? 'light'].text}
-              style={{ marginRight: 15, opacity: pressed ? 0.5 : 1, marginBottom: 0, shadowColor: '#000', shadowOpacity: 10 }}
+              style={{ marginRight: 15, opacity: pressed ? 0.5 : 1, marginBottom: 0, shadowOpacity: 10 }}
             />
           ),
         }}

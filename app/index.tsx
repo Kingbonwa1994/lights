@@ -4,6 +4,6 @@ import { Redirect, Stack } from 'expo-router'
 
 export default function home() {
   return (
-    <Redirect href={`/app/(tabs)/index`} />
+    <Redirect href={`(tabs)`} />
   )
 }
