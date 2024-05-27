@@ -1,7 +1,8 @@
 // ProductCard.js
 import { Product } from '@/data/products';
+import { Link } from 'expo-router';
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
 
 
 
@@ -12,9 +13,13 @@ type ProductCardProps = {
 const ProductCard : React.FC<ProductCardProps> = ({product}) => {
   return (
     <View style={styles.card}>
-      <Image source={{ uri: product.image }} style={styles.image} />
+      <Link href={`${product.id}`} asChild>
+      <Pressable>
+      <Image source={{uri: (product.image)}} style={styles.image}  />
       <Text style={styles.name}>{product.name}</Text>
       <Text style={styles.price}>${product.price.toFixed(2)}</Text>
+    </Pressable>
+    </Link>
     </View>
   );
 };
@@ -30,7 +35,7 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   image: {
-    width: '100%',
+    width: '50%',
     height: 150,
   },
   name: {
